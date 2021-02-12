@@ -16,20 +16,20 @@ function setup(){
 
     ground=new Ground(500,350,300,20)
 
-    box1=new Box(380,200,30,30)
-    box2=new Box(420,200,30,30)
-    box3=new Box(460,200,30,30)
-    box4=new Box(500,200,30,30)
-    box5=new Box(540,200,30,30)
-    box6=new Box(580,200,30,30)
-    box7=new Box(620,200,30,30)
+    box1=new Box(380,320,30,30)
+    box2=new Box(420,320,30,30)
+    box3=new Box(460,320,30,30)
+    box4=new Box(500,320,30,30)
+    box5=new Box(540,320,30,30)
+    box6=new Box(580,320,30,30)
+    box7=new Box(620,320,30,30)
 
-    box8=new Box(400,170,30,30)
-    box9=new Box(440,170,30,30)
-    box10=new Box(480,170,30,30)
-    box11=new Box(520,170,30,30)
-    box12=new Box(560,170,30,30)
-    box13=new Box(600,170,30,30)
+    box8=new Box(400,290,30,30)
+    box9=new Box(440,290,30,30)
+    box10=new Box(480,290,30,30)
+    box11=new Box(520,290,30,30)
+    box12=new Box(560,290,30,30)
+    box13=new Box(600,290,30,30)
 
    
 
