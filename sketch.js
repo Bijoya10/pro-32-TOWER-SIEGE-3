@@ -33,14 +33,16 @@ function setup(){
 
    
 
-    poly=new Polygon(100,100)
-    rope=new Slingshot(poly.body,{x:100,y:100})
+    poly=new Polygon(200,200)
+    rope=new Slingshot(poly.body,{x:200,y:200})
 }
 
 function draw(){
-    background(200);
+    background("#C4DBE0");
     Engine.update(engine)
-
+    fill("#0C6980")
+    textSize(20)
+    text("Press space for another chance",300,50)
     ground.display()
     box1.display()
     box2.display()

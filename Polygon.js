@@ -13,7 +13,8 @@ class Polygon{
         var body=this.body
         var pos=this.body.position
         push()
-        stroke("blue");
+        stroke("#00A8A8");
+        fill("#00A8A8")
         strokeWeight(3)
         line(body.vertices[0].x,body.vertices[0].y,body.vertices[1].x,body.vertices[1].y)
         line(body.vertices[1].x,body.vertices[1].y,body.vertices[2].x,body.vertices[2].y)

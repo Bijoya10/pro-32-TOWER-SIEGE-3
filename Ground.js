@@ -8,6 +8,7 @@ class Ground{
     display(){
         var pos=this.body.position
         push()
+        fill("#0C6980")
         rectMode(CENTER)
         rect(pos.x,pos.y,this.width,this.height)
         pop()
