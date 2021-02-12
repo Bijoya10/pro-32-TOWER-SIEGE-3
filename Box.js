@@ -7,7 +7,7 @@ class Box{
         this.body=Bodies.rectangle(x,y,width,height,options)
         this.width=width
         this.height=height
-        this.image=loadImage("box.png")
+        this.image=loadImage("box.PNG")
         World.add(world,this.body);
         this.visiblity=255;
     }
