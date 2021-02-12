@@ -9,10 +9,10 @@ class Box{
         this.height=height
         this.image=loadImage("box.png")
         World.add(world,this.body);
-        this.visibility=255;
+        this.visiblity=255;
     }
-    display(){
 
+    display(){
         if(this.body.speed<7){
             var pos=this.body.position
             push()
@@ -26,10 +26,16 @@ class Box{
             
             World.remove(world,this.body)
             push()
-            this.visibility=this.visibility-5;
-            tint(255,this.visibility)
+            this.visiblity=this.visiblity-5;
+            tint(255,this.visiblity)
             image(this.image,this.body.position.x,this.body.position.y,this.width,this.height)
             pop()
+        }
+    }
+
+    score(){
+        if(this.visiblity<250 && this.visiblity>-5){
+            score++
         }
     }
 }

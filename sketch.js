@@ -7,6 +7,8 @@ var engine,world;
 var ground,poly;
 var box1,box2,box3,box4,box5,box6,box7,box8,box9,box10;
 var state="onSling"
+var score=0;
+var clr="#C4DBE0"
 
 function setup(){
     createCanvas(800,500);
@@ -31,18 +33,20 @@ function setup(){
     box12=new Box(560,290,30,30)
     box13=new Box(600,290,30,30)
 
-   
-
     poly=new Polygon(200,200)
     rope=new Slingshot(poly.body,{x:200,y:200})
+    getTime();
 }
 
 function draw(){
-    background("#C4DBE0");
+    background(clr);
+
     Engine.update(engine)
     fill("#0C6980")
     textSize(20)
-    text("Press space for another chance",300,50)
+    text("Press space for another chance",250,450)
+    text("Score: "+score,500,50)
+
     ground.display()
     box1.display()
     box2.display()
@@ -57,9 +61,20 @@ function draw(){
     box11.display()
     box12.display()
     box13.display()
-    
 
-
+    box1.score()
+    box2.score()
+    box3.score()
+    box4.score()
+    box5.score()
+    box6.score()
+    box7.score()
+    box8.score()
+    box9.score()
+    box10.score()
+    box11.score()
+    box12.score()
+    box13.score()
 
     rope.display()
     poly.display()
@@ -81,5 +96,17 @@ function keyPressed(){
         Matter.Body.setPosition(poly.body,{x:100,y:100})
         rope.reattach(poly.body)
         state="onSling"
+    }
+}
+
+async function getTime(){
+    var response=await fetch("http://worldtimeapi.org/api/timezone/Asia/Kolkata")
+    var responseJson=await response.json()
+    var hr=responseJson.datetime.slice(11,13)
+   
+    if(hr>7 && hr<18){
+        clr="#C4DBE0"
+    }else{
+        clr="#151B25"
     }
 }

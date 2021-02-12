@@ -9,6 +9,7 @@ class Polygon{
         console.log(this.body)
         World.add(world,this.body);
     }
+    
     display(){
         var body=this.body
         var pos=this.body.position

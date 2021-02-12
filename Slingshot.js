@@ -14,9 +14,11 @@ class Slingshot{
     fly(){
         this.body.bodyA=null
     }
+
     reattach(body1){
         this.body.bodyA=body1
     }
+    
     display(){
         if(this.body.bodyA){
             var pos=this.body.bodyA.position
